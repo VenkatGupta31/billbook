@@ -16,3 +16,4 @@ This repository contains the code for the bill book MERN Application.
 ``
 require('crypto').randomBytes(64).toString('hex')
 ``
+5. Add DATABASE_URI also contact repo admin / connect your own mongo db uri.
