@@ -9,7 +9,7 @@ const handleLogin = async (req, res) => {
       .status(400)
       .json({ message: 'Username and password are required.' });
   const foundUser = await User.findOne({ username: user }).exec();
-  if (!foundUser) return res.sendStatus(401); //Unauthorized
+    if (!foundUser) return res.sendStatus(401); //Unauthorized
   // evaluate password
   const match = await bcrypt.compare(pwd, foundUser.password);
   if (match) {
@@ -23,7 +23,7 @@ const handleLogin = async (req, res) => {
         },
       },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: '1m' }
+      { expiresIn: '15m' }
     );
     const refreshToken = jwt.sign(
       { username: foundUser.username },
