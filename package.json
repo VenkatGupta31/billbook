@@ -4,8 +4,8 @@
   "description": "Node.js Web Server",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
   },
   "author": "Venkat Gupta",
   "license": "ISC",
