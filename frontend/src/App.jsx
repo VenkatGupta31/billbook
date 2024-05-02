@@ -1,11 +1,17 @@
-
+import { useState } from "react";
+import Autocomplete from "./components/autocomplete";
+import Dashboard from "./layouts/dashBoard/dashBoard";
 
 const App = () => {
-  return (  
+  const [searchArr, setSearch] = useState([]);
+  const selectedSet = [];
+
+  return (
     <>
-    <h1>Billbook</h1>
+      <Dashboard />
+
     </>
   );
-}
- 
+};
+
 export default App;
